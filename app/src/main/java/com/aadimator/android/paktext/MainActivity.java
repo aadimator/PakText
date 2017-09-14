@@ -1,27 +1,27 @@
 package com.aadimator.android.paktext;
 
 import android.graphics.Bitmap;
-import android.graphics.Color;
+import android.graphics.Canvas;
 import android.graphics.Typeface;
 import android.os.Build;
+import android.os.Bundle;
 import android.os.Environment;
 import android.support.constraint.ConstraintLayout;
-import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.EditText;
 import android.widget.ImageButton;
-import android.widget.TextView;
+import android.widget.Toast;
 
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Date;
 import java.util.List;
 import java.util.Random;
 
@@ -29,8 +29,6 @@ import butterknife.BindArray;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-
-import static java.security.AccessController.getContext;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -86,13 +84,22 @@ public class MainActivity extends AppCompatActivity {
     @OnClick(R.id.imageButtonSaveImage)
     void saveImage(ImageButton view) {
         mPictureView.setDrawingCacheEnabled(true);
-        Bitmap bitmap = mPictureView.getDrawingCache();
+        Bitmap bitmap = Bitmap.createBitmap(
+                mPictureView.getWidth(),
+                mPictureView.getHeight(),
+                Bitmap.Config.ARGB_8888); //mPictureView.getDrawingCache();
+        Canvas canvas = new Canvas(bitmap);
+        mPictureView.draw(canvas);
 
-        File file = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES), "test.png");
+        String fileName = new SimpleDateFormat("yyyyMMddHHmm'.png'").format(new Date());
+        File file = new File(
+                Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES),
+                fileName
+        );
 
         try {
             bitmap.compress(Bitmap.CompressFormat.PNG, 95, new FileOutputStream(file));
-            Log.v("SAVE_IMAGE", "File saved to : " + file.getAbsolutePath());
+            Toast.makeText(MainActivity.this, "Saved !!!", Toast.LENGTH_SHORT).show();
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }

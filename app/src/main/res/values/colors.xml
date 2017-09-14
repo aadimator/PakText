@@ -3,9 +3,8 @@
     <color name="colorPrimary">#3f51b5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#ff4081</color>
-    <color name="colorWhite">#fff</color>
+    <color name="colorWhite">#ffffff</color>
 
-    <color name="sandyStone">#66000000</color>
     <color name="sandyOcean">#046380</color>
     <color name="sandyDiver">#002F2F</color>
     <color name="firenzeGreen">#468966</color>
@@ -21,7 +20,6 @@
 
 
     <integer-array name="backgroundColors">
-        <item>@color/sandyStone</item>
         <item>@color/sandyOcean</item>
         <item>@color/sandyDiver</item>
         <item>@color/firenzeGreen</item>
