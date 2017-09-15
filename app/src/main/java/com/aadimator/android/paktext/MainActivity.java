@@ -82,16 +82,16 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @OnClick(R.id.imageButtonSaveImage)
-    void saveImage(ImageButton view) {
+    void saveImage(View view) {
         mPictureView.setDrawingCacheEnabled(true);
         Bitmap bitmap = Bitmap.createBitmap(
                 mPictureView.getWidth(),
                 mPictureView.getHeight(),
-                Bitmap.Config.ARGB_8888); //mPictureView.getDrawingCache();
+                Bitmap.Config.ARGB_8888);
         Canvas canvas = new Canvas(bitmap);
         mPictureView.draw(canvas);
 
-        String fileName = new SimpleDateFormat("yyyyMMddHHmm'.png'").format(new Date());
+        String fileName = new SimpleDateFormat("yyyyMMddHHmmss'.png'").format(new Date());
         File file = new File(
                 Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES),
                 fileName
