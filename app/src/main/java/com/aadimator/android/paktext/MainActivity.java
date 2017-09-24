@@ -83,7 +83,6 @@ public class MainActivity extends AppCompatActivity {
 
     @OnClick(R.id.imageButtonSaveImage)
     void saveImage(View view) {
-        mPictureView.setDrawingCacheEnabled(true);
         Bitmap bitmap = Bitmap.createBitmap(
                 mPictureView.getWidth(),
                 mPictureView.getHeight(),
