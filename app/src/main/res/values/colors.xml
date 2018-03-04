@@ -18,6 +18,11 @@
     <color name="circusPurlple">#2E0927</color>
     <color name="friendsBrown">#2F2933</color>
 
+    <color name="lightPurple">#9978BF</color>
+    <color name="lightBlue">#50BED9</color>
+    <color name="lightOrange">#F5B363</color>
+    <color name="lightPink">#F57D70</color>
+
 
     <integer-array name="backgroundColors">
         <item>@color/sandyOcean</item>
@@ -32,6 +37,10 @@
         <item>@color/flatDarkBlue</item>
         <item>@color/circusPurlple</item>
         <item>@color/friendsBrown</item>
+        <item>@color/lightPurple</item>
+        <item>@color/lightBlue</item>
+        <item>@color/lightOrange</item>
+        <item>@color/lightPink</item>
     </integer-array>
 
 
