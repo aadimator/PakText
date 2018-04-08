@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="fonts">
+        <item>@string/faiz_lahori_nastaleeq</item>
+        <item>@string/jameel_noori_kasheeda</item>
+        <item>@string/jameel_noori_nastaliq</item>
+        <item>@string/mehr_nastaleeq</item>
+        <item>@string/nafees_naskh</item>
+    </string-array>
+
+</resources>

@@ -4,4 +4,19 @@
     <string name="title_activity_fullscreen">FullscreenActivity</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
+    
+    
+    <!-- Fonts -->
+    <string name="urdu_naskh_asia_type">fonts/asunaskh.ttf</string>
+    <string name="faiz_lahori_nastaleeq">fonts/faiz-lahori-nastaleeq-regular.ttf</string>
+    <string name="fajer_noori_nastaleeq">fonts/Fajer Noori Nastalique.ttf</string>
+    <string name="jameel_noori_kasheeda">fonts/jameel-noori-kasheeda-regular-1.ttf</string>
+    <string name="jameel_noori_nastaliq">fonts/jameel-noori-nastaleeq-regular.ttf</string>
+    <string name="mehr_nastaleeq">fonts/Mehr Nastaliq Web.ttf</string>
+    <string name="nafees_naskh">fonts/Nafees Pakistani Web Naskh BTK.ttf</string>
+    <string name="nafees_nastaleeq">fonts/nafees-nastaleeq-regular.ttf</string>
+    <string name="pak_nastaleeq">fonts/pak-nastaleeq-regular.ttf</string>
+
+    
+    
 </resources>

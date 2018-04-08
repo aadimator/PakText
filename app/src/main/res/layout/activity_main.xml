@@ -85,16 +85,26 @@
         android:layout_marginStart="16dp"/>
 
     <ImageButton
+        android:id="@+id/imageButtonFontChange"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginStart="16dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageButtonTextSize"
+        app:srcCompat="@drawable/ic_format_size" />
+
+    <ImageButton
         android:id="@+id/imageButtonChangeAlignment"
         android:layout_width="48dp"
         android:layout_height="48dp"
         android:layout_marginBottom="16dp"
-        android:layout_marginLeft="10dp"
+        android:layout_marginStart="8dp"
         android:background="?attr/selectableItemBackgroundBorderless"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toRightOf="@+id/imageButtonTextSize"
-        app:srcCompat="@drawable/ic_format_align_right"
-        android:layout_marginStart="10dp"/>
+        app:layout_constraintStart_toEndOf="@+id/imageButtonFontChange"
+        app:srcCompat="@drawable/ic_format_align_right" />
 
     <ImageButton
         android:id="@+id/imageButtonSaveImage"

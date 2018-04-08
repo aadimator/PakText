@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -44,6 +45,9 @@ public class MainActivity extends AppCompatActivity {
     @BindArray(R.array.backgroundColors)
     int[] backgroundColors;
 
+    @BindArray(R.array.fonts)
+    String[] fonts;
+
     @OnClick(R.id.imageButtonChangeColor)
     void changeColor(View view) {
         int color = backgroundColors[new Random().nextInt(backgroundColors.length)];
@@ -57,6 +61,16 @@ public class MainActivity extends AppCompatActivity {
             window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
             window.setStatusBarColor(color);
         }
+    }
+
+    @OnClick(R.id.imageButtonFontChange)
+    void changeFont(View view) {
+        String path = fonts[new Random().nextInt(fonts.length)];
+
+        Typeface typeface = Typeface.createFromAsset(getAssets(), path);
+        mEditText.setTypeface(typeface);
+
+        Log.d("FontInfo", path);
     }
 
     @OnClick(R.id.imageButtonTextSize)
