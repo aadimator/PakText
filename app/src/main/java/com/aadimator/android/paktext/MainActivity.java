@@ -33,9 +33,6 @@ import butterknife.OnClick;
 
 public class MainActivity extends AppCompatActivity {
 
-    private List<Integer> textSizes = new ArrayList<>(Arrays.asList(16, 18, 22, 28, 32, 36, 48));
-    private int currentTextSize;
-
     @BindView(R.id.editText)
     EditText mEditText;
 
@@ -43,14 +40,25 @@ public class MainActivity extends AppCompatActivity {
     ConstraintLayout mPictureView;
 
     @BindArray(R.array.backgroundColors)
+    int[] textSizes;
+
+    private int currentTextSize = 0;
+
+    @BindArray(R.array.backgroundColors)
     int[] backgroundColors;
+
+    private int currentColor = 0;
 
     @BindArray(R.array.fonts)
     String[] fonts;
 
+    private int currentFont = 0;
+
     @OnClick(R.id.imageButtonChangeColor)
     void changeColor(View view) {
-        int color = backgroundColors[new Random().nextInt(backgroundColors.length)];
+        currentColor++;
+        if (currentColor >= backgroundColors.length) currentColor = 0;
+        int color = backgroundColors[currentColor];
 
         ConstraintLayout rootView = (ConstraintLayout) findViewById(R.id.rootView);
         rootView.setBackgroundColor(color);
@@ -65,7 +73,9 @@ public class MainActivity extends AppCompatActivity {
 
     @OnClick(R.id.imageButtonFontChange)
     void changeFont(View view) {
-        String path = fonts[new Random().nextInt(fonts.length)];
+        currentFont++;
+        if (currentFont >= fonts.length) currentFont = 0;
+        String path = fonts[currentFont];
 
         Typeface typeface = Typeface.createFromAsset(getAssets(), path);
         mEditText.setTypeface(typeface);
@@ -75,12 +85,11 @@ public class MainActivity extends AppCompatActivity {
 
     @OnClick(R.id.imageButtonTextSize)
     void changeTextSize(View view) {
-        int index = textSizes.indexOf(currentTextSize);
-        index++;
-        if (index >= textSizes.size()) index = 0;
+        currentTextSize++;
+        if (currentTextSize >= textSizes.length) currentTextSize = 0;
 
-        currentTextSize = textSizes.get(index);
-        mEditText.setTextSize(currentTextSize);
+        int size = textSizes[currentTextSize];
+        mEditText.setTextSize(size);
     }
 
     @OnClick(R.id.imageButtonChangeAlignment)
@@ -128,8 +137,7 @@ public class MainActivity extends AppCompatActivity {
         Typeface typeface = Typeface.createFromAsset(getAssets(), "fonts/jameel-noori-nastaleeq-regular.ttf");
         mEditText.setTypeface(typeface);
 
-        currentTextSize = textSizes.get(textSizes.size() - 1);
-        mEditText.setTextSize(currentTextSize);
+        mEditText.setTextSize(textSizes[currentTextSize]);
 
     }
 }

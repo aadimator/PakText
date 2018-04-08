@@ -81,8 +81,7 @@
         android:background="?attr/selectableItemBackgroundBorderless"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toRightOf="@+id/imageButtonChangeColor"
-        app:srcCompat="@drawable/ic_format_size"
-        android:layout_marginStart="16dp"/>
+        app:srcCompat="@drawable/ic_action_font_bigger" />
 
     <ImageButton
         android:id="@+id/imageButtonFontChange"
@@ -93,14 +92,14 @@
         android:background="?attr/selectableItemBackgroundBorderless"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageButtonTextSize"
-        app:srcCompat="@drawable/ic_format_size" />
+        app:srcCompat="@drawable/ic_action_font_faces" />
 
     <ImageButton
         android:id="@+id/imageButtonChangeAlignment"
         android:layout_width="48dp"
         android:layout_height="48dp"
         android:layout_marginBottom="16dp"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="16dp"
         android:background="?attr/selectableItemBackgroundBorderless"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageButtonFontChange"

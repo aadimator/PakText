@@ -9,4 +9,16 @@
         <item>@string/nafees_naskh</item>
     </string-array>
 
+    <integer-array name="fontSize">
+        <item>12</item>
+        <item>14</item>
+        <item>16</item>
+        <item>18</item>
+        <item>22</item>
+        <item>28</item>
+        <item>32</item>
+        <item>36</item>
+        <item>48</item>
+    </integer-array>
+
 </resources>
