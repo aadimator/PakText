@@ -10,7 +10,6 @@
     <color name="firenzeGreen">#468966</color>
     <color name="firenzeOrange">#B64926</color>
     <color name="phaedraGreen">#00A388</color>
-    <color name="phaedraOrange">#FF6138</color>
     <color name="flatGrey">#2C3E50</color>
     <color name="flatOrange">#E74C3C</color>
     <color name="flatLightBlue">#3498DB</color>
@@ -23,6 +22,20 @@
     <color name="lightOrange">#F5B363</color>
     <color name="lightPink">#F57D70</color>
 
+    <color name="gettysberg_red">#962D3E</color>
+    <color name="gettysberg_blue">#348899</color>
+    <color name="japanese_green">#5C832F</color>
+    <color name="japanese_brown">#382513</color>
+    <color name="blue_sky_dark">#16193B</color>
+    <color name="blue_sky_normal">#35478C</color>
+    <color name="blue_sky_light">#4E7AC7</color>
+    <color name="blue_sky_lighter">#7FB2F0</color>
+    <color name="purple_rain_darker">#25064C</color>
+    <color name="purple_rain_dark">#36175E</color>
+    <color name="purple_rain">#553285</color>
+    <color name="purple_rain_light">#7B52AB</color>
+    <color name="purple_rain_lighter">#9768D1</color>
+
 
     <integer-array name="backgroundColors">
         <item>@color/sandyOcean</item>
@@ -30,7 +43,6 @@
         <item>@color/firenzeGreen</item>
         <item>@color/firenzeOrange</item>
         <item>@color/phaedraGreen</item>
-        <item>@color/phaedraOrange</item>
         <item>@color/flatGrey</item>
         <item>@color/flatOrange</item>
         <item>@color/flatLightBlue</item>
@@ -41,6 +53,20 @@
         <item>@color/lightBlue</item>
         <item>@color/lightOrange</item>
         <item>@color/lightPink</item>
+        <item>@color/gettysberg_red</item>
+        <item>@color/gettysberg_blue</item>
+        <item>@color/japanese_brown</item>
+        <item>@color/japanese_green</item>
+        <item>@color/blue_sky_dark</item>
+        <item>@color/blue_sky_normal</item>
+        <item>@color/blue_sky_light</item>
+        <item>@color/blue_sky_lighter</item>
+        <item>@color/purple_rain_darker</item>
+        <item>@color/purple_rain_dark</item>
+        <item>@color/purple_rain</item>
+        <item>@color/purple_rain_light</item>
+        <item>@color/purple_rain_lighter</item>
+
     </integer-array>
 
 
