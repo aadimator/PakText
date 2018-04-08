@@ -30,6 +30,7 @@ import butterknife.BindArray;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import butterknife.OnLongClick;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -39,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
     @BindView(R.id.pictureView)
     ConstraintLayout mPictureView;
 
-    @BindArray(R.array.backgroundColors)
+    @BindArray(R.array.fontSize)
     int[] textSizes;
 
     private int currentTextSize = 0;
@@ -53,6 +54,14 @@ public class MainActivity extends AppCompatActivity {
     String[] fonts;
 
     private int currentFont = 0;
+
+    @OnLongClick(R.id.imageButtonChangeColor)
+    boolean previousColor(View view){
+        if (currentColor == 0) currentColor = backgroundColors.length;
+        currentColor -= 2;
+        changeColor(view);
+        return true;
+    }
 
     @OnClick(R.id.imageButtonChangeColor)
     void changeColor(View view) {
@@ -83,6 +92,14 @@ public class MainActivity extends AppCompatActivity {
         Log.d("FontInfo", path);
     }
 
+    @OnLongClick(R.id.imageButtonTextSize)
+    boolean previousSize(View view){
+        if (currentTextSize == 0) currentTextSize = textSizes.length;
+        currentTextSize -= 2;
+        changeTextSize(view);
+        return true;
+    }
+
     @OnClick(R.id.imageButtonTextSize)
     void changeTextSize(View view) {
         currentTextSize++;
@@ -111,6 +128,7 @@ public class MainActivity extends AppCompatActivity {
                 mPictureView.getHeight(),
                 Bitmap.Config.ARGB_8888);
         Canvas canvas = new Canvas(bitmap);
+        mEditText.setCursorVisible(false);
         mPictureView.draw(canvas);
 
         String fileName = new SimpleDateFormat("yyyyMMddHHmmss'.png'").format(new Date());
@@ -125,6 +143,7 @@ public class MainActivity extends AppCompatActivity {
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
+        mEditText.setCursorVisible(true);
     }
 
     @Override
@@ -134,10 +153,10 @@ public class MainActivity extends AppCompatActivity {
 
         ButterKnife.bind(this);
 
-        Typeface typeface = Typeface.createFromAsset(getAssets(), "fonts/jameel-noori-nastaleeq-regular.ttf");
-        mEditText.setTypeface(typeface);
+        changeFont(mPictureView);
+        changeTextSize(mPictureView);
 
-        mEditText.setTextSize(textSizes[currentTextSize]);
+
 
     }
 }

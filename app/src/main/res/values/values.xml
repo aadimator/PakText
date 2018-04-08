@@ -3,8 +3,8 @@
 
     <string-array name="fonts">
         <item>@string/faiz_lahori_nastaleeq</item>
-        <item>@string/jameel_noori_kasheeda</item>
         <item>@string/jameel_noori_nastaliq</item>
+        <item>@string/jameel_noori_kasheeda</item>
         <item>@string/mehr_nastaleeq</item>
         <item>@string/nafees_naskh</item>
     </string-array>
