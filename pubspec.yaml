@@ -1,0 +1,37 @@
+name: pak_text
+description: "A new Flutter project."
+publish_to: 'none'
+version: 0.1.0
+
+environment:
+  sdk: '>=3.2.6 <4.0.0'
+
+dependencies:
+  flex_color_picker: ^3.3.1
+  flutter:
+    sdk: flutter
+  image_gallery_saver: ^2.0.3
+  logger: ^2.0.2+1
+  screenshot: ^2.1.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+flutter:
+  uses-material-design: true
+  fonts:
+    - family: Jameel Nastaleeq
+      fonts:
+        - asset: fonts/jameel-noori-nastaleeq-regular.ttf
+    - family: Jameel Kasheeda
+      fonts:
+        - asset: fonts/jameel-noori-kasheeda-regular.ttf
+    - family: Faiz Nastaliq
+      fonts:
+        - asset: fonts/faiz-lahori-nastaleeq-regular.ttf
+    - family: Nafees Naskh
+      fonts:
+        - asset: fonts/Nafees Pakistani Web Naskh BTK.ttf
+
