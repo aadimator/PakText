@@ -42,7 +42,7 @@ class _MainScreenState extends State<MainScreen> {
     'Nafees Naskh'
   ];
 
-  int currentSizeIndex = 0;
+  int currentSizeIndex = 1;
   int currentFontIndex = 0;
   int currentColorIndex = 0;
   int currentAlignmentIndex = 0;
