@@ -60,17 +60,26 @@ class _MainScreenState extends State<MainScreen> {
     // final Uint8List? screenshot = await screenshotController.capture();
     // final result = await ImageGallerySaver.saveImage(screenshot!);
 
+    // Get the device height
+    final deviceHeight = MediaQuery.of(context).size.height;
     // Create the non-editable mirror widget
     Widget mirrorWidget = Container(
       width: MediaQuery.of(context).size.width,
       color: backgroundColors[currentColorIndex],
       child: Padding(
         padding: const EdgeInsets.all(16.0),
-        child: Text(
-          textController.text,
-          style: TextStyle(
-              color: Colors.white, fontSize: textSizes[currentSizeIndex]),
-          textAlign: textAlignments[currentAlignmentIndex],
+        child: ConstrainedBox(
+          constraints: BoxConstraints(minHeight: deviceHeight),
+          child: Center(
+            child: Text(
+              textController.text,
+              style: TextStyle(
+                  color: Colors.white,
+                  fontSize: textSizes[currentSizeIndex],
+                  fontFamily: fonts[currentFontIndex]),
+              textAlign: textAlignments[currentAlignmentIndex],
+            ),
+          ),
         ),
       ),
     );
