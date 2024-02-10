@@ -96,6 +96,15 @@ class _MainScreenState extends State<MainScreen> {
 
     logger.d("File Saved to Gallery: $result");
     logger.d("Pixel Ratio: $pixelRatio");
+
+    // Show a Snackbar
+    final scaffoldMessenger = ScaffoldMessenger.of(context);
+    scaffoldMessenger.showSnackBar(
+      const SnackBar(
+        content: Text('Image saved to gallery!'),
+        duration: Duration(seconds: 2),
+      ),
+    );
   }
 
   void changeTextSize() {
