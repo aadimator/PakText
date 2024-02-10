@@ -1,5 +1,5 @@
 name: pak_text
-description: "A new Flutter project."
+description: "A simple application to store minimalistic text in Urdu fonts as images."
 publish_to: 'none'
 version: 0.1.0
 
@@ -10,6 +10,7 @@ dependencies:
   flex_color_picker: ^3.3.1
   flutter:
     sdk: flutter
+  flutter_launcher_icons: ^0.13.1
   image_gallery_saver: ^2.0.3
   logger: ^2.0.2+1
   screenshot: ^2.1.0
@@ -24,14 +25,22 @@ flutter:
   fonts:
     - family: Jameel Nastaleeq
       fonts:
-        - asset: fonts/jameel-noori-nastaleeq-regular.ttf
+        - asset: assets/fonts/jameel-noori-nastaleeq-regular.ttf
     - family: Jameel Kasheeda
       fonts:
-        - asset: fonts/jameel-noori-kasheeda-regular.ttf
+        - asset: assets/fonts/jameel-noori-kasheeda-regular.ttf
     - family: Faiz Nastaliq
       fonts:
-        - asset: fonts/faiz-lahori-nastaleeq-regular.ttf
+        - asset: assets/fonts/faiz-lahori-nastaleeq-regular.ttf
     - family: Nafees Naskh
       fonts:
-        - asset: fonts/Nafees Pakistani Web Naskh BTK.ttf
+        - asset: assets/fonts/Nafees Pakistani Web Naskh BTK.ttf
 
+flutter_launcher_icons:
+  image_path: "assets/images/icon.png"
+  android: true
+  ios: true
+  remove_alpha_ios: true
+  adaptive_icon_background: "#ffffff"
+  adaptive_icon_foreground: "assets/images/icon_foreground.png"
+  adaptive_icon_monochrome: "assets/images/icon_monochrome.png"

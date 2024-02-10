@@ -85,7 +85,7 @@ class _MainScreenState extends State<MainScreen> {
     );
 
     // Capture the screenshot
-    double pixelRatio = MediaQuery.of(context).devicePixelRatio;
+    double pixelRatio = MediaQuery.of(context).devicePixelRatio + 1;
     Uint8List screenshot = await screenshotController
         .captureFromLongWidget(mirrorWidget, pixelRatio: pixelRatio);
 
